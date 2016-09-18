@@ -13,7 +13,7 @@ At the moment, **ksah** is just getting started and will be under development fo
 
 The server currently:
 
-* responds to HTTP/1.1 GET, HEAD, and OPTIONS (aditionally, it can be configured to support some basic PUT and DELETE) 
+* responds to HTTP/1.1 GET, HEAD, and OPTIONS (additionally, it can be configured to support some basic PUT and DELETE) 
   requests (all others request methods respond with 405).
 * supports basic directory listing.
 * supports HTTP/1.1 keep-alive behavior.

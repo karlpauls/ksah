@@ -36,9 +36,6 @@ import java.util.logging.Logger;
 /**
  * This handler does the actual work of handling file requests.
  *
- * It is not completly non blocking alas. Some simple file operations are done
- * via blocking calls.
- *
  * @author <a href="mailto:karlpauls@gmail.com">Karl Pauls (karlpauls@gmail.com)</a>
  */
 public class StaticHandlerImpl implements StaticHandler

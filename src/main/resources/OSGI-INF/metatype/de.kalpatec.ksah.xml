@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metatype:MetaData xmlns:metatype="http://www.osgi.org/xmlns/metatype/v1.1.0" >
+
+    <OCD name="ksah config" description="A ksah server configuration." id="ksah-config">
+        <AD name="port" id="de.kalpatec.ksah.port" description="The port to bind to (mandatory)." type="String" required="true" />
+        <AD name="port" id="de.kalpatec.ksah.port" description="The port to bind to (mandatory)." type="String" required="false"/>
+        <AD name="address" id="de.kalpatec.ksah.address"description="The interface name to bind to (optional, default: 0.0.0.0)." type="String" required="false"/>
+        <AD name="backlog" id="de.kalpatec.ksah.backlog" description="The backlog size (optional, default: 1024)." type="String" required="false"/>
+        <AD name="keepalive" id="de.kalpatec.ksah.keepalive" description="Set tcp keepalive (optional, default: true)." type="String" required="false"/>
+        <AD name="nodelay" id="de.kalpatec.ksah.nodelay" description="Set tcp nodelay (optional, default: true)." type="String" required="false"/>
+        <AD name="reuseaddress" id="de.kalpatec.ksah.reuseaddress" description="Set tcp reuseaddress (optional, default: true)." type="String" required="false"/>
+        <AD name="rcvbuf" id="de.kalpatec.ksah.rcvbuf" description="The size of the receive buffer which is also the max header size (optional, default: 65536)." type="String" required="false"/>
+        <AD name="sndbuf" id="de.kalpatec.ksah.sndbuf" description="The size of the send buffer (optional, default: 65536)." type="String" required="false"/>
+        <AD name="buffercache" id="de.kalpatec.ksah.buffercache" description="The total size of _direct_ buffers used for receiving (optional, default: 16777216)." type="String" required="false"/>
+        <AD name="timeout" id="de.kalpatec.ksah.timeout" description="The read/write timeout for a socket (optional, default: 2:SECONDS)." type="String" required="false"/>
+        <AD name="maxconnnections" id="de.kalpatec.ksah.maxconnnections" description="The max number of concurrent connections (optional, default: 1024)." type="String" required="false"/>
+        <AD name="maxconnectiontime" id="de.kalpatec.ksah.maxconnectiontime" description="The max time a connection is keep-alive in milliseconds, 0 for no keep-alive (optional, default: 10000)." type="String" required="false"/>
+        <AD name="root" id="de.kalpatec.ksah.handler.static.root" description="The location of the web root (optional, default: ./www)." type="String" required="false"/>
+        <AD name="bufferSize" id="de.kalpatec.ksah.handler.static.buffersize" description="The size of the read file buffer (optional, default: 65536)." type="String" required="false"/>
+        <AD name="staticbuffercache" id="de.kalpatec.ksah.handler.static.buffercache" description="The total size of _direct_ buffers used for reading files (optional, default: 16777216)." type="String" required="false"/>
+        <AD name="charset" id="de.kalpatec.ksah.handler.static.charset" description="The charset send for text/ mime files (optional, default: plattform-encoding)." type="String" required="false"/>
+        <AD name="list" id="de.kalpatec.ksah.handler.static.list" description="Enable directory listings (optional, default: true)." type="String" required="false"/>
+        <AD name="write" id="de.kalpatec.ksah.handler.static.write" description="Enable writing via PUT and DELETE (optional, default: false)." type="String" required="false"/>
+    </OCD>
+
+    <Designate pid="de.kalpatec.ksah">
+        <Object ocdref="ksah-config" />
+    </Designate>
+
+</metatype:MetaData>
